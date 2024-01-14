@@ -19,22 +19,16 @@ export default function Editar() {
   }, [])
 
   async function atualizar() {
-    try {
-      const response = await axios.put(
-        `https://json-test-kappa.vercel.app/posts/${id}`,
-        {
-          id: dados.id,
-          name: editar
-        }
-      )
+    const response = await axios.put(
+      `https://json-test-kappa.vercel.app/posts/${id}`,
+      {
+        id: dados.id,
+        name: editar
+      }
+    )
 
-      alert('Name alterado !!')
-      window.location.href = '/'
-    } catch (error) {
-      console.log('Erro na api' + error)
-      alert('Name alterado !!')
-      window.location.href = '/'
-    }
+    alert('Name alterado !!')
+    window.location.href = '/'
   }
 
   return (
