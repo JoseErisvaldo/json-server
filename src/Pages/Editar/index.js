@@ -27,24 +27,27 @@ export default function Editar() {
           name: editar
         }
       )
+
+      alert('Name alterado !!')
+      window.location.href = '/'
     } catch (error) {
-      console.log('Erro na Api ' + error)
+      console.log('Erro na api' + error)
       alert('Name alterado !!')
       window.location.href = '/'
     }
-
-    return (
-      <div>
-        <h1>Editar {id}</h1>
-        <div>
-          <div>Nome</div>
-          <input
-            onChange={e => setEditar(e.target.value)}
-            placeholder="Descrição post"
-          ></input>
-          <button onClick={atualizar}>Atualizar</button>
-        </div>
-      </div>
-    )
   }
+
+  return (
+    <div>
+      <h1>Editar {id}</h1>
+      <div>
+        <div>Nome</div>
+        <input
+          onChange={e => setEditar(e.target.value)}
+          placeholder="Descrição post"
+        ></input>
+        <button onClick={atualizar}>Atualizar</button>
+      </div>
+    </div>
+  )
 }
