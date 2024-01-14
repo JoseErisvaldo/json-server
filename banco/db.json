@@ -1,0 +1,27 @@
+{
+  "posts": [
+    {
+      "id": "5ae3",
+      "name": "José Erisvaldo"
+    },
+    {
+      "id": "b9d0",
+      "name": "das"
+    }
+  ],
+  "comments": [
+    {
+      "id": "1",
+      "text": "a comment about post 1",
+      "postId": "1"
+    },
+    {
+      "id": "2",
+      "text": "another comment about post 1",
+      "postId": "1"
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}
