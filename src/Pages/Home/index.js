@@ -26,9 +26,12 @@ function Home() {
         alert('Campo vazio !!')
         return
       }
-      const response = await axios.post('http://localhost:3000/posts', {
-        name: name
-      })
+      const response = await axios.post(
+        'https://json-test-u7ml.vercel.app/posts',
+        {
+          name: name
+        }
+      )
 
       const updateList = await api.get('/posts')
       setList(updateList.data)
@@ -40,7 +43,7 @@ function Home() {
 
   async function exluir(e) {
     try {
-      await axios.delete(`http://localhost:3000/posts/${e}`)
+      await axios.delete(`https://json-test-u7ml.vercel.app/posts/${e}`)
       alert('Post deletado')
 
       const response = await api.get('/posts')

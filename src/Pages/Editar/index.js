@@ -19,10 +19,13 @@ export default function Editar() {
   }, [])
 
   async function atualizar() {
-    const response = await axios.put(`http://localhost:3000/posts/${id}`, {
-      id: dados.id,
-      name: editar
-    })
+    const response = await axios.put(
+      `https://json-test-u7ml.vercel.app/posts/${id}`,
+      {
+        id: dados.id,
+        name: editar
+      }
+    )
 
     alert('Name alterado !!')
     window.location.href = '/'
