@@ -20,7 +20,7 @@ export default function Editar() {
 
   async function atualizar() {
     const response = await axios.put(
-      `https://json-test-u7ml.vercel.app/posts/${id}`,
+      `https://json-test-kappa.vercel.app/posts/${id}`,
       {
         id: dados.id,
         name: editar

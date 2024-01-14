@@ -27,7 +27,7 @@ function Home() {
         return
       }
       const response = await axios.post(
-        'https://json-test-u7ml.vercel.app/posts',
+        'https://json-test-kappa.vercel.app//posts',
         {
           name: name
         }
@@ -43,13 +43,16 @@ function Home() {
 
   async function exluir(e) {
     try {
-      await axios.delete(`https://json-test-u7ml.vercel.app/posts/${e}`)
+      await axios.delete(`https://json-test-kappa.vercel.app/posts/${e}`)
       alert('Post deletado')
 
       const response = await api.get('/posts')
       setList(response.data)
+      console.log(response.data)
     } catch (error) {
       console.log('Erro na api ' + error)
+      const response = await api.get('/posts')
+      setList(response.data)
     }
   }
 
