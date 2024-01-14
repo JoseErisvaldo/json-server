@@ -27,7 +27,7 @@ function Home() {
         return
       }
       const response = await axios.post(
-        'https://json-test-kappa.vercel.app//posts',
+        'https://json-test-kappa.vercel.app/posts',
         {
           name: name
         }
@@ -37,6 +37,8 @@ function Home() {
       setList(updateList.data)
     } catch (error) {
       console.log('Erro na api' + error)
+      const updateList = await api.get('/posts')
+      setList(updateList.data)
     }
     setName('')
   }
